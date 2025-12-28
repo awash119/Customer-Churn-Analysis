@@ -1,0 +1,2 @@
+data_path: "data/raw1/ChurnModelling.csv"
+raw_data_path: "data/raw/ChurnModelling.csv"
