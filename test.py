@@ -9,5 +9,6 @@ class User:
         print("Getting email...")
         return self._email
 
-user1=User("alice","    Alice@Example.com","password123")
+user1=User("alice","Alice@Example.com","password123")
 
+print(user1.email)  # This will trigger the getter and print the email
