@@ -15,7 +15,7 @@ columns:
   target: "Exited"
   drop_columns: ["CustomerId", "RowNumber", "Surname"]
   critical_columns: ["Firstname"]
-  outlier_columns: ["CreditScore", "Age", "NumOfProducts"]
+  outlier_columns: ["CreditScore", "Age", "NumOfProducts","EstimatedSalary"]
   nominal_columns: ["Geography", "Gender"]
   numeric_columns: ["Balance", "EstimatedSalary"]
   feature_columns:

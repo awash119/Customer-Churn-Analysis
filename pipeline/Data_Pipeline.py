@@ -4,7 +4,8 @@ import logging
 # ensure project root is on sys.path so sibling packages (src, utils) can be imported
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.data_ingestion import DataIngestorCSV
-from utils.config import get_data_path
+from src.handling_outliers import Outlier_Detector,IQROutlierDetection
+from utils.config import get_data_path,get_columns
 
 
 
@@ -17,6 +18,11 @@ def Data_Pipeline():
     logging.info(f"Columns: {df.columns.tolist()}\n")
 
     print("Step 02:Handling Outliers \n")
+    columns=get_columns()
+    outlier_cols=columns['outlier_columns']
+    out=Outlier_Detector(strategy=IQROutlierDetection())
+    out.handle_outliers(df,outlier_cols)
+    print(f"After Removing Outliers Data Shape {df.shape}")
 
 
 Data_Pipeline()
