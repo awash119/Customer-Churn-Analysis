@@ -8,6 +8,13 @@ def get_data_path():
 def get_columns():
     config = load_config()
     return config['columns']
+
+def feature_binning():
+    config = load_config()
+    return config['feature_binning']
+def feature_encoding():
+    config = load_config()
+    return config['feature_encoding']
     
 
 def load_config():
