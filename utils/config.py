@@ -15,6 +15,9 @@ def feature_binning():
 def feature_encoding():
     config = load_config()
     return config['feature_encoding']
+def feature_scaling():
+    config = load_config()
+    return config['feature_scaling']
     
 
 def load_config():

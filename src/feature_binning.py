@@ -23,7 +23,7 @@ class CustomBinningStrategy(FeatureBinningStrategy):
     def bin_feature(self,df,column):
         def assign_bin(value):
             if value==850:
-                return "Execellent"
+                return "Excellent"
             for bin_label,bin_range in self.bin_definitions.items():
                 if bin_range[0]<=value< bin_range[1] :
                     return bin_label
